@@ -236,10 +236,16 @@
     });
 </script>
 <script>
-        
         function myFunction() {
-                const url = new URL(window.location.search);
-                console.log(url)
+		let urlString = "https://guia-do-enriquecimento-judaico.github.io/ps1/?utm_source=teste+utm";
+		let paramString = urlString.split('?')[1];
+		let queryString = new URLSearchParams(paramString);
+		for(let pair of queryString.entries()) {
+			console.log("Key is:" + pair[0]);
+			console.log("Value is:" + pair[1]);
+		}
+	}
+        
 }
 (function() {
      const utmParamQueryString = new URLSearchParams(window.location.search);
