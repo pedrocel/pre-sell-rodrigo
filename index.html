@@ -238,7 +238,7 @@
 <script>
         
         function myFunction() {
-                const url = new URL('https://example.com/?a=hello&b=world');
+                const url = new URL(window.location.search);
                 console.log(url)
 }
 (function() {
