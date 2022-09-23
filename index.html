@@ -238,8 +238,7 @@
 <script>
         function myFunction() {
 		let urlString = "https://guia-do-enriquecimento-judaico.github.io/ps1/?utm_source=teste+utm";
-		let paramString = urlString.split('?')[1];
-		let queryString = new URLSearchParams(paramString);
+		let queryString = new URLSearchParams(urlString);
 		for(let pair of queryString.entries()) {
 			console.log("Key is:" + pair[0]);
 			console.log("Value is:" + pair[1]);
