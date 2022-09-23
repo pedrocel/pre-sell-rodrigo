@@ -115,6 +115,7 @@
     </div>
     <footer class="mt-auto mb-2 d-flex justify-content-center align-items-center flex-column">
                 <section>
+                        <button onclick="myFunction()">Click me</button>
             <a class="text-white btn btn-outline-secondary btn btn-secondary-outline ml-md-auto ml-0" style="cursor: pointer;" data-toggle="modal" data-target="#report-violation">
             <i class="fas fa-exclamation-circle"></i>
                 Reportar
@@ -235,6 +236,12 @@
     });
 </script>
 <script>
+        
+        function myFunction() {
+                const utmParamQueryString = new URLSearchParams(window.location.search);
+                console.log(utmParamQueryString)
+  document.getElementById("demo").innerHTML = "Hello World";
+}
 (function() {
      const utmParamQueryString = new URLSearchParams(window.location.search);
      if (utmParamQueryString.toString()) {
